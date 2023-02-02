@@ -1,6 +1,6 @@
 {% set name = "nelson-core" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "c0c70157afdfb8a95ddc2ee96ba59c675522d27a28c4fa3d746084399a3725c4" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "6d7d97c68e2fcde386ee3366772b532b8ef0e703ac85174845fa0b97f0db05cb" %}
 
 package:
   name: {{ name|lower }}
@@ -11,10 +11,7 @@ source:
   url: https://github.com/Nelson-numerical-software/nelson-minimalist-core/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - patches/01-c17config.patch
-    - patches/02-win_exports.patch
-    - patches/03-unicode.patch
-    - patches/04-missing_exports.patch
+    - patch/01-trigo_bigobj.patch
 
 build:
   number: 0
