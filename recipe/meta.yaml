@@ -1,6 +1,6 @@
 {% set name = "nelson-core" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "c0c70157afdfb8a95ddc2ee96ba59c675522d27a28c4fa3d746084399a3725c4" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "6d7d97c68e2fcde386ee3366772b532b8ef0e703ac85174845fa0b97f0db05cb" %}
 
 package:
   name: {{ name|lower }}
@@ -39,7 +39,7 @@ test:
 
 about:
   home: https://github.com/Nelson-numerical-software/nelson-minimalist-core
-  summary: 'Minimalistic core of Nelson, a numerical interpreter'
+  summary: Minimalistic core of Nelson, a numerical interpreter
   license: LGPL-3.0-or-later
   license_file: LICENSE
   doc_url: https://nelson-numerical-software.github.io/nelson-website/help/en_US/
