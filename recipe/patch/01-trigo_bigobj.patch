@@ -1,0 +1,15 @@
+diff --git a/modules/trigonometric_functions/CMakeLists.txt b/modules/trigonometric_functions/CMakeLists.txt
+index 25adf8f25..ede83cd7d 100644
+--- a/modules/trigonometric_functions/CMakeLists.txt
++++ b/modules/trigonometric_functions/CMakeLists.txt
+@@ -15,6 +15,10 @@ file(GLOB TRIGONOMETRIC_FUNCTIONS_SRC "${CMAKE_CURRENT_SOURCE_DIR}/src/cpp/*.cpp
+ list(FILTER TRIGONOMETRIC_FUNCTIONS_SRC EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/src/cpp/dllMain.cpp") 
+ # ==============================================================================
+ add_library(${module_library_name} ${TRIGONOMETRIC_FUNCTIONS_SRC})
++if(WIN32)
++    target_compile_definitions(${module_library_name} PUBLIC "NLSTRIGONOMETRIC_FUNCTIONS_EXPORTS")
++    target_compile_options(${module_library_name} PRIVATE /bigobj)
++endif()
+ target_include_directories(
+     ${module_library_name}
+     PUBLIC
