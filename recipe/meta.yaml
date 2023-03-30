@@ -10,6 +10,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/Nelson-numerical-software/nelson-minimalist-core/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - patch/01-bigobj.patch
 
 build:
   number: 0
