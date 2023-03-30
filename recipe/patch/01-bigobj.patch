@@ -1,0 +1,48 @@
+diff --git a/modules/elementary_functions/CMakeLists.txt b/modules/elementary_functions/CMakeLists.txt
+index 5a83c2f4d..6e1c5acc9 100644
+--- a/modules/elementary_functions/CMakeLists.txt
++++ b/modules/elementary_functions/CMakeLists.txt
+@@ -17,6 +17,7 @@ list(FILTER ELEMENTARY_FUNCTIONS_SRC EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/
+ add_library(${module_library_name} ${ELEMENTARY_FUNCTIONS_SRC})
+ if(WIN32)
+     target_compile_definitions(${module_library_name} PUBLIC "NLSELEMENTARY_FUNCTIONS_EXPORTS")
++    target_compile_options(${module_library_name} PRIVATE /bigobj)
+ endif()
+ target_include_directories(
+     ${module_library_name}
+diff --git a/modules/linear_algebra/CMakeLists.txt b/modules/linear_algebra/CMakeLists.txt
+index 51f87c78d..cca7a5f9f 100644
+--- a/modules/linear_algebra/CMakeLists.txt
++++ b/modules/linear_algebra/CMakeLists.txt
+@@ -17,6 +17,7 @@ list(FILTER LINEAR_ALGEBRA_SRC EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/src/cp
+ add_library(${module_library_name} ${LINEAR_ALGEBRA_SRC})
+ if(WIN32)
+     target_compile_definitions(${module_library_name} PUBLIC "NLSLINEAR_ALGEBRA_EXPORTS")
++    target_compile_options(${module_library_name} PRIVATE /bigobj)
+ endif()
+ target_include_directories(
+     ${module_library_name}
+diff --git a/modules/operators/CMakeLists.txt b/modules/operators/CMakeLists.txt
+index fc47bac56..e46ab1284 100644
+--- a/modules/operators/CMakeLists.txt
++++ b/modules/operators/CMakeLists.txt
+@@ -20,6 +20,7 @@ list(FILTER OPERATORS_SRC EXCLUDE REGEX
+ add_library(${module_library_name} ${OPERATORS_SRC})
+ if(WIN32)
+     target_compile_definitions(${module_library_name} PUBLIC "NLSOPERATORS_EXPORTS")
++    target_compile_options(${module_library_name} PRIVATE /bigobj)
+ endif()
+ # ==============================================================================
+ target_include_directories(
+diff --git a/modules/trigonometric_functions/CMakeLists.txt b/modules/trigonometric_functions/CMakeLists.txt
+index 26bc8a69e..ab7e1bf99 100644
+--- a/modules/trigonometric_functions/CMakeLists.txt
++++ b/modules/trigonometric_functions/CMakeLists.txt
+@@ -17,6 +17,7 @@ list(FILTER TRIGONOMETRIC_FUNCTIONS_SRC EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DI
+ add_library(${module_library_name} ${TRIGONOMETRIC_FUNCTIONS_SRC})
+ if(WIN32)
+     target_compile_definitions(${module_library_name} PUBLIC "NLSTRIGONOMETRIC_FUNCTIONS_EXPORTS")
++    target_compile_options(${module_library_name} PRIVATE /bigobj)
+ endif()
+ target_include_directories(
+     ${module_library_name}

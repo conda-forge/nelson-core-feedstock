@@ -1,11 +1,11 @@
-About nelson-core
-=================
+About nelson-core-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nelson-core-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Nelson-numerical-software/nelson-minimalist-core
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nelson-core-feedstock/blob/main/LICENSE.txt)
 
 Summary: Minimalistic core of Nelson, a numerical interpreter
 

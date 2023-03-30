@@ -1,6 +1,6 @@
 {% set name = "nelson-core" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "6d7d97c68e2fcde386ee3366772b532b8ef0e703ac85174845fa0b97f0db05cb" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "d9212109b54c677423ff1e3998c30d3dd9f165734b8fc40cc279dce961e0edd2" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   url: https://github.com/Nelson-numerical-software/nelson-minimalist-core/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - patch/01-trigo_bigobj.patch
+    - patch/01-bigobj.patch
 
 build:
   number: 0
